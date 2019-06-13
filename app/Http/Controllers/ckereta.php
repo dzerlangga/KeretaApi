@@ -39,43 +39,44 @@ class ckereta extends Controller
 		\DB::table('kereta')->where('id',$id)->delete();
 	}
 
-	public function rangkaian($id)
+	public function gerbong($id)
 	{
 		$data = gerbong::where('id_kereta',$id)->get();
 		$kereta = \DB::table('kereta')->where('id',$id)->get();
 		// dd($data);
-		return view('kereta.data_rangkaian',compact('data','kereta'));
+		return view('kereta.data_gerbong',compact('data','kereta'));
 	}
 
 
-	public function plus_rangkaian(Request $request,$id)
+	public function plus_gerbong(Request $request,$id)
 	{
 		$gerbong = new gerbong;
 		$gerbong->no_gerbong = $request->no_gerbong;
 		$gerbong->id_kereta = $id;
 		$gerbong->save();
-		return redirect('/rangkaian/'.$id); 
+		return redirect('/gerbong/'.$id); 
 	}
 
-	public function edit_rangkaian(Request $request,$id)
+	public function edit_gerbong(Request $request,$id)
 	{
 		$id_r = $request->id;
 		$no = $request->no_gerbong;
 		\DB::table('gerbong')->where('id',$id_r)->update([
 			'no_gerbong' =>$no,
 		]);
-		return redirect('/rangkaian/'.$id);
+		return redirect('/gerbong/'.$id);
 	}
 
-	public function hapus_rangkaian(Request $request)
+	public function hapus_gerbong(Request $request)
 	{
 		$id = $request->kode;
 		\DB::table('gerbong')->where('id',$id)->delete();
 	}
 
-	public function gerbong()
+	public function berita_gerbong($id)
 	{
-		return view('kereta.gerbong');
+		echo $id;
+		// return view('kereta.gerbong');
 	}
 
 

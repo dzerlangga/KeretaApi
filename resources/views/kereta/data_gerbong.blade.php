@@ -123,11 +123,11 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Tambah Rangkaian</h4>
+                                <h4 class="modal-title">Tambah gerbong</h4>
                             </div>
                             <div class="modal-body">
                                <div class="example-box-wrapper">
-                                <form action="/plusrangkaian/{{ $kereta[0]->id }}" method="post">
+                                <form action="/plusgerbong/{{ $kereta[0]->id }}" method="post">
                                     {{ csrf_field() }}
                                     <div class="form-group">
                                         <label class="col-sm-1 control-label">Nomor</label>
@@ -147,7 +147,7 @@
             </div><!-- End modal plus kereta -->
 
             @foreach($data as $ker)
-            <div class="modal fade" id="d_rangkaian{{ $ker->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="d_gerbong{{ $ker->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -156,7 +156,7 @@
                         </div>
                         <div class="modal-body">
                            <div class="example-box-wrapper">
-                            <form action="/edit_rangkaian/{{ $kereta[0]->id }}" method="post">
+                            <form action="/edit_gerbong/{{ $kereta[0]->id }}" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-sm-1 control-label">Nomor</label>
@@ -202,9 +202,9 @@
                     <td style="text-align: center;">{{ $ker->id }}</td>
                     <td style="text-align: center;">{{ $ker->no_gerbong }}</td>
                     <td style="text-align: center;" width="30%">
-                        <button class="btn btn-success"><i class="glyph-icon icon-navicon"></i></button>
-                        <button class="btn btn-yellow" data-toggle="modal" data-target="#d_rangkaian{{ $ker->id }}"><i class="glyph-icon icon-pencil"></i></button>
-                        <button class="btn btn-danger hapus_rangkaian" kode="{{ $ker->id }}" no="{{ $ker->no_gerbong }}"><i class="glyph-icon icon-trash"></i></button>
+                         <a href="/berita/{{ $ker->id }}"><button class="btn btn-success"><i class="glyph-icon icon-navicon"></i></button></a>
+                        <button class="btn btn-yellow" data-toggle="modal" data-target="#d_gerbong{{ $ker->id }}"><i class="glyph-icon icon-pencil"></i></button>
+                        <button class="btn btn-danger hapus_gerbong" kode="{{ $ker->id }}" no="{{ $ker->no_gerbong }}"><i class="glyph-icon icon-trash"></i></button>
                     </td>
                 </tr>
                 @endforeach

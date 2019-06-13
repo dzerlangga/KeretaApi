@@ -29,11 +29,12 @@ Route::post('/pluskereta', 'ckereta@plus');
 Route::post('/edit', 'ckereta@edit');
 Route::get('/hapus', 'ckereta@hapus');
 
-// Rangkaian
-Route::get('/rangkaian/{id}', 'ckereta@rangkaian');
-Route::post('/plusrangkaian/{id}', 'ckereta@plus_rangkaian');
-Route::post('/edit_rangkaian/{id}', 'ckereta@edit_rangkaian');
-Route::get('/hapus_rangkaian', 'ckereta@hapus_rangkaian');
-
 // gerbong
-Route::get('/gerbong', 'ckereta@gerbong');
+Route::get('/gerbong/{id}', 'ckereta@gerbong');
+Route::post('/plusgerbong/{id}', 'ckereta@plus_gerbong');
+Route::post('/edit_gerbong/{id}', 'ckereta@edit_gerbong');
+Route::get('/hapus_gerbong', 'ckereta@hapus_gerbong');
+
+// berita
+Route::get('/berita/{id}', 'ckereta@berita_gerbong');
+
