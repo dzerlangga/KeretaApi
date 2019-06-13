@@ -25,6 +25,20 @@ class ckereta extends Controller
 
 	}
 
+	public function plus(Request $request)
+	{
+		$keretaplus = new kereta;
+		$keretaplus->nama = $request->nama;
+		$keretaplus->save();
+		return redirect('/ker'); 
+	}
+
+	public function hapus(Request $request)
+	{
+		$id = $request->kode;
+		\DB::table('kereta')->where('id',$id)->delete();
+	}
+
 	public function rangkaian($id)
 	{
 		$data = rangkaian::where('id_kereta',$id)->get();
@@ -53,18 +67,11 @@ class ckereta extends Controller
 		return redirect('/rangkaian/'.$id);
 	}
 
-	public function plus(Request $request)
-	{
-		$keretaplus = new kereta;
-		$keretaplus->nama = $request->nama;
-		$keretaplus->save();
-		return redirect('/ker'); 
-	}
-
-	public function hapus(Request $request)
+	public function hapus_rangkaian(Request $request)
 	{
 		$id = $request->kode;
-		\DB::table('kereta')->where('id',$id)->delete();
+		\DB::table('rangkaian')->where('id',$id)->delete();
 	}
+
 
 }

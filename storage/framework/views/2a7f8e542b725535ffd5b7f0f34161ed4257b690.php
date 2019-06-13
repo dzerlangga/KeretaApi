@@ -2,10 +2,10 @@
 
 <div id="page-sidebar">
     <div class="scroll-sidebar">
-       <ul id="sidebar-menu">
+     <ul id="sidebar-menu">
         <li class="header"><span>Overview</span></li>
         <li>
-            <a href="./input" title="Admin Dashboard">
+            <a href="../input" title="Admin Dashboard">
                 <i class="glyph-icon icon-linecons-tv"></i>
                 <span>Admin dashboard</span>
             </a>
@@ -111,12 +111,12 @@
             <div class="panel">
                 <div class="panel-body">
                     <h3 class="title-hero" id="page-title">
-                       Data Rangkaian
-                       <p style="font-size: 10px;">Kereta <?php echo e($kereta[0]->nama); ?></p>
-                       <button class="btn btn-primary float-right" data-toggle="modal" data-target="#kereta">Tambah<i class="glyph-icon icon-plus"></i></button>
-                   </h3><!-- end head form -->
+                     Data Rangkaian
+                     <p style="font-size: 10px;">Kereta <?php echo e($kereta[0]->nama); ?></p>
+                     <button class="btn btn-primary float-right" data-toggle="modal" data-target="#kereta">Tambah<i class="glyph-icon icon-plus"></i></button>
+                 </h3><!-- end head form -->
 
-                   <div class="modal fade" id="kereta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                 <div class="modal fade" id="kereta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -124,7 +124,7 @@
                                 <h4 class="modal-title">Tambah Rangkaian</h4>
                             </div>
                             <div class="modal-body">
-                             <div class="example-box-wrapper">
+                               <div class="example-box-wrapper">
                                 <form action="/plusrangkaian/<?php echo e($kereta[0]->id); ?>" method="post">
                                     <?php echo e(csrf_field()); ?>
 
@@ -154,7 +154,7 @@
                             <h4 class="modal-title">Edit Kereta</h4>
                         </div>
                         <div class="modal-body">
-                         <div class="example-box-wrapper">
+                           <div class="example-box-wrapper">
                             <form action="/edit_rangkaian/<?php echo e($kereta[0]->id); ?>" method="post">
                                 <?php echo e(csrf_field()); ?>
 
@@ -197,14 +197,14 @@
                 </tfoot>
 
                 <tbody>
-                 <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ker): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                 <tr>
-                    <td style="text-align: center;" ><?php echo e($ker->id); ?></td>
+                   <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ker): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                   <tr>
+                    <td style="text-align: center;"><?php echo e($ker->id); ?></td>
                     <td style="text-align: center;"><?php echo e($ker->no_rangkaian); ?></td>
                     <td style="text-align: center;" width="30%">
                         <button class="btn btn-success"><i class="glyph-icon icon-navicon"></i></button>
                         <button class="btn btn-yellow" data-toggle="modal" data-target="#d_rangkaian<?php echo e($ker->id); ?>"><i class="glyph-icon icon-pencil"></i></button>
-                        <button class="btn btn-danger hapus2" ><i class="glyph-icon icon-trash"></i></button>
+                        <button class="btn btn-danger hapus_rangkaian" kode="<?php echo e($ker->id); ?>" no="<?php echo e($ker->no_rangkaian); ?>"><i class="glyph-icon icon-trash"></i></button>
                     </td>
                 </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -215,5 +215,8 @@
 </div>
 </div>
 
+</div>
+</div>
+</div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\monarch\resources\views/kereta/data_rangkaian.blade.php ENDPATH**/ ?>

@@ -646,47 +646,80 @@
         <!-- Theme switcher -->
 
         <script type="text/javascript" src="../../assets/widgets/theme-switcher/themeswitcher.js"></script>
-        <script type="text/javascript" src="sweetalert2.all.js"></script>
+        <script type="text/javascript" src="../../sweetalert2.all.js"></script>
 
     </div>
 
-
     <script type="text/javascript">
 
-// Confirmation
-$(".hapus").click(function(){
 
-    var kode=$(this).attr("kode");
-    var nama=$(this).attr("nama");
+        $(".hapus_rangkaian").click(function(){
 
-    swal({
-        title: '<strong>Yakin ingin menghapus? <br>' + nama +'</strong>',
-        type: 'warning',
-        showCloseButton: true,
-        showCancelButton: true,
-        focusConfirm: false,
-        confirmButtonText:
-        'Yakin',
-        cancelButtonText:
-        'Batal'
-    }).then(function(isConfirm){
-        if(isConfirm.value==true){
-            $.ajax({
-                type:"get",
-                url:"./hapus",
-                data:"kode="+kode+"&nama="+nama,
-                cache:false,
-                success:function(html){
-                 swal("Berhasil", "Dihapus", "success");
-                 location.reload('.ada');
-             }
-         });
-        }else{
-            swal("Cancelled", "Dibatalkan", "error");
-            return false;
-        }
-    })
-});
+        var kode=$(this).attr("kode");
+        var no=$(this).attr("no");
+
+        swal({
+            title: '<strong>Yakin ingin menghapus? <br>' + no +'</strong>',
+            type: 'warning',
+            showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText:
+            'Yakin',
+            cancelButtonText:
+            'Batal'
+        }).then(function(isConfirm){
+            if(isConfirm.value==true){
+                $.ajax({
+                    type:"get",
+                    url:"../hapus_rangkaian",
+                    data:"kode="+kode,
+                    cache:false,
+                    success:function(html){
+                     swal("Berhasil", "Dihapus", "success");
+                     location.reload();
+                 }
+             });
+            }else{
+                swal("Cancelled", "Dibatalkan", "error");
+                return false;
+            }
+        })
+    });
+
+       $(".hapus").click(function(){
+
+        var kode=$(this).attr("kode");
+        var nama=$(this).attr("nama");
+
+        swal({
+            title: '<strong>Yakin ingin menghapus? <br>' + nama +'</strong>',
+            type: 'warning',
+            showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText:
+            'Yakin',
+            cancelButtonText:
+            'Batal'
+        }).then(function(isConfirm){
+            if(isConfirm.value==true){
+                $.ajax({
+                    type:"get",
+                    url:"./hapus",
+                    data:"kode="+kode+"&nama="+nama,
+                    cache:false,
+                    success:function(html){
+                     swal("Berhasil", "Dihapus", "success");
+                     location.reload('.ada');
+                 }
+             });
+            }else{
+                swal("Cancelled", "Dibatalkan", "error");
+                return false;
+            }
+        })
+    });
 
 </script>
 </body>
