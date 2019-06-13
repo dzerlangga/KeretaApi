@@ -75,8 +75,9 @@ class ckereta extends Controller
 
 	public function berita_gerbong($id)
 	{
-		echo $id;
-		// return view('kereta.gerbong');
+		$data = gerbong::where('id_kereta',$id)->get();
+		$kereta = \DB::table('kereta')->where('id',$id)->get();	
+		return view('kereta.gerbong_k');
 	}
 
 

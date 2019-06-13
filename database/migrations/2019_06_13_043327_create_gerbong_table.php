@@ -15,7 +15,7 @@ class CreateGerbongTable extends Migration
     {
         Schema::create('gerbong', function (Blueprint $table) {
            $table->bigIncrements('id');
-            $table->integer('no_rangkaian');
+            $table->integer('no_gerbong');
             $table->integer('id_kereta');
             $table->timestamps();
         });

@@ -114,7 +114,7 @@
                 <div class="panel-body">
                     <h3 class="title-hero" id="page-title">
                      Data Rangkaian
-                     <p style="font-size: 10px;">Kereta {{  }}</p>
+                     <p style="font-size: 10px;">Kereta </p>
                      <button class="btn btn-primary float-right" data-toggle="modal" data-target="#kereta">Tambah<i class="glyph-icon icon-plus"></i></button>
                  </h3><!-- end head form -->
 
@@ -127,7 +127,7 @@
                             </div>
                             <div class="modal-body">
                                <div class="example-box-wrapper">
-                                <form action="/plusrangkaian/{{ }" method="post">
+                                <form action="/plusrangkaian/" method="post">
                                     {{ csrf_field() }}
                                     <div class="form-group">
                                         <label class="col-sm-1 control-label">Nomor</label>
@@ -146,8 +146,8 @@
                 </div>
             </div><!-- End modal plus kereta -->
 
-            @foreach()
-            <div class="modal fade" id="d_rangkaian{{  }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          
+            <div class="modal fade" id="d_rangkaian" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -156,13 +156,13 @@
                         </div>
                         <div class="modal-body">
                            <div class="example-box-wrapper">
-                            <form action="/edit_gerbong/{{  }}" method="post">
+                            <form action="/edit_gerbong/" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-sm-1 control-label">Nomor</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" name="no_rangkaian" value="{{  }}">
-                                        <input type="hidden" class="form-control" name="id" value="{{  }}">
+                                        <input type="text" class="form-control" name="no_rangkaian" value="">
+                                        <input type="hidden" class="form-control" name="id" value="">
                                     </div>
                                 </div>
                             </div>
@@ -175,8 +175,7 @@
                 </div>
             </div>
         </div>
-        @endforeach<!-- End modal detail -->
-
+       <!-- End modal detail -->
 
         <div class="example-box-wrapper">
             <table id="datatable-row-highlight" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -197,17 +196,17 @@
                 </tfoot>
 
                 <tbody>
-                   @foreach()
+                
                    <tr>
-                    <td style="text-align: center;">{{  }}</td>
-                    <td style="text-align: center;">{{  }}</td>
+                    <td style="text-align: center;"></td>
+                    <td style="text-align: center;"></td>
                     <td style="text-align: center;" width="30%">
                         <button class="btn btn-success"><i class="glyph-icon icon-navicon"></i></button>
-                        <button class="btn btn-yellow" data-toggle="modal" data-target="#d_rangkaian{{  }}"><i class="glyph-icon icon-pencil"></i></button>
-                        <button class="btn btn-danger hapus_rangkaian" kode="{{  }}" no="{{  }}"><i class="glyph-icon icon-trash"></i></button>
+                        <button class="btn btn-yellow" data-toggle="modal" data-target="#d_rangkaian"><i class="glyph-icon icon-pencil"></i></button>
+                        <button class="btn btn-danger hapus_rangkaian" kode="" no=""><i class="glyph-icon icon-trash"></i></button>
                     </td>
                 </tr>
-                @endforeach
+             
             </tbody>
         </table>
     </div>
