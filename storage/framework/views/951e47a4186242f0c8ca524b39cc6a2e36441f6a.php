@@ -129,8 +129,16 @@
                                     <?php echo e(csrf_field()); ?>
 
                                     <div class="form-group">
-                                        <label class="col-sm-1 control-label">Nomor</label>
                                         <div class="col-md-6">
+                                            <label class="col-sm-6 control-label">Nomor</label>
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-sm-6 control-label">Nomor</label>
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="col-sm-6 control-label">Nomor</label>
                                             <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
                                         </div>
                                     </div>

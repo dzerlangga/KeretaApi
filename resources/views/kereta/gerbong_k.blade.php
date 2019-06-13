@@ -4,7 +4,7 @@
 
 <div id="page-sidebar">
     <div class="scroll-sidebar">
-     <ul id="sidebar-menu">
+       <ul id="sidebar-menu">
         <li class="header"><span>Overview</span></li>
         <li>
             <a href="../input" title="Admin Dashboard">
@@ -113,12 +113,12 @@
             <div class="panel">
                 <div class="panel-body">
                     <h3 class="title-hero" id="page-title">
-                     Data Laporan
-                     <p style="font-size: 10px;">Kereta {{ $kereta[0]->nama }} Gerbong {{ $data2[0]->no_gerbong }}</p>
-                     <button class="btn btn-primary float-right" data-toggle="modal" data-target="#kereta">Tambah<i class="glyph-icon icon-plus"></i></button>
-                 </h3><!-- end head form -->
+                       Data Laporan
+                       <p style="font-size: 10px;">Kereta {{ $kereta[0]->nama }} Gerbong {{ $data2[0]->no_gerbong }}</p>
+                       <button class="btn btn-primary float-right" data-toggle="modal" data-target="#kereta">Tambah<i class="glyph-icon icon-plus"></i></button>
+                   </h3><!-- end head form -->
 
-                 <div class="modal fade" id="kereta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                   <div class="modal fade" id="kereta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -126,34 +126,47 @@
                                 <h4 class="modal-title">Tambah Ulasan</h4>
                             </div>
                             <div class="modal-body">
-                               <div class="example-box-wrapper">
+                             <div class="example-box-wrapper">
                                 <form action="/plusrangkaian/" method="post">
                                     {{ csrf_field() }}
+                                    
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <label class="col-sm-6 control-label">Nomor</label>
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-sm-6 control-label">Nomor</label>
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="col-sm-6 control-label">Nomor</label>
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                        </div>
+                                    </div>
+
                                     <div class="form-group">
                                         <label class="col-sm-1 control-label">Nomor</label>
-                                        <div class="col-md-6">
+                                        <div class="col-sm-12">
                                             <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
                                         </div>
                                     </div>
-                                     <div class="form-group">
+                                    
+                                    <div class="form-group">
                                         <label class="col-sm-1 control-label">Nomor</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
                                         </div>
                                     </div>
-                                     <div class="form-group">
+                                    
+                                    <div class="form-group">
                                         <label class="col-sm-1 control-label">Nomor</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
                                         </div>
                                     </div>
-                                     <div class="form-group">
-                                        <label class="col-sm-1 control-label">Nomor</label>
-                                        <div class="col-sm-12">
-                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
-                                        </div>
-                                    </div>
-                                     <div class="form-group">
+                                    
+                                    <div class="form-group">
                                         <label class="col-sm-1 control-label">Nomor</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
@@ -170,7 +183,7 @@
                 </div>
             </div><!-- End modal plus kereta -->
 
-          
+
             <div class="modal fade" id="d_rangkaian" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -179,7 +192,7 @@
                             <h4 class="modal-title">Edit Laporan</h4>
                         </div>
                         <div class="modal-body">
-                           <div class="example-box-wrapper">
+                         <div class="example-box-wrapper">
                             <form action="/edit_gerbong/" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
@@ -199,7 +212,7 @@
                 </div>
             </div>
         </div>
-       <!-- End modal detail -->
+        <!-- End modal detail -->
 
         <div class="example-box-wrapper">
             <table id="datatable-row-highlight" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -220,8 +233,8 @@
                 </tfoot>
 
                 <tbody>
-                
-                   <tr>
+
+                 <tr>
                     <td style="text-align: center;"></td>
                     <td style="text-align: center;"></td>
                     <td style="text-align: center;" width="30%">
@@ -230,7 +243,7 @@
                         <button class="btn btn-danger hapus_rangkaian" kode="" no=""><i class="glyph-icon icon-trash"></i></button>
                     </td>
                 </tr>
-             
+
             </tbody>
         </table>
     </div>
