@@ -113,8 +113,8 @@
             <div class="panel">
                 <div class="panel-body">
                     <h3 class="title-hero" id="page-title">
-                     Data Rangkaian
-                     <p style="font-size: 10px;">Kereta </p>
+                     Data Laporan
+                     <p style="font-size: 10px;">Kereta {{ $kereta[0]->nama }} Gerbong {{ $data2[0]->no_gerbong }}</p>
                      <button class="btn btn-primary float-right" data-toggle="modal" data-target="#kereta">Tambah<i class="glyph-icon icon-plus"></i></button>
                  </h3><!-- end head form -->
 
@@ -123,13 +123,37 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Tambah Rangkaian</h4>
+                                <h4 class="modal-title">Tambah Ulasan</h4>
                             </div>
                             <div class="modal-body">
                                <div class="example-box-wrapper">
                                 <form action="/plusrangkaian/" method="post">
                                     {{ csrf_field() }}
                                     <div class="form-group">
+                                        <label class="col-sm-1 control-label">Nomor</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-1 control-label">Nomor</label>
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-1 control-label">Nomor</label>
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-1 control-label">Nomor</label>
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
                                         <label class="col-sm-1 control-label">Nomor</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
@@ -152,7 +176,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Edit Kereta</h4>
+                            <h4 class="modal-title">Edit Laporan</h4>
                         </div>
                         <div class="modal-body">
                            <div class="example-box-wrapper">

@@ -75,9 +75,12 @@ class ckereta extends Controller
 
 	public function berita_gerbong($id)
 	{
-		$data = gerbong::where('id_kereta',$id)->get();
-		$kereta = \DB::table('kereta')->where('id',$id)->get();	
-		return view('kereta.gerbong_k');
+		$data = gerbong::where('id_kereta',$id)->get('id_kereta');
+		$data2 = gerbong::where('id_kereta',$id)->get();
+		$kode = $data[0]->id_kereta;
+		$kereta = \DB::table('kereta')->where('id',$kode)->get();	
+
+		return view('kereta.gerbong_k',compact('data','data2','kereta'));
 	}
 
 

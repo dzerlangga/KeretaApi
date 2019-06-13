@@ -152,11 +152,11 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Edit Kereta</h4>
+                            <h4 class="modal-title">Edit Gerbong</h4>
                         </div>
                         <div class="modal-body">
                            <div class="example-box-wrapper">
-                            <form action="/edit_gerbong/{{ $kereta[0]->id }}" method="post">
+                            <form action="/edit_gerbong/{{ $ker->id }}" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-sm-1 control-label">Nomor</label>
