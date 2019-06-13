@@ -131,7 +131,7 @@
                                     <div class="form-group">
                                         <label class="col-sm-1 control-label">Nomor</label>
                                         <div class="col-sm-12">
-                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
+                                            <input type="text" class="form-control" name="no_gerbong" placeholder="Masukan nomor"> 
                                         </div>
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-1 control-label">Nomor</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" name="no_rangkaian" value="<?php echo e($ker->no_rangkaian); ?>">
+                                        <input type="text" class="form-control" name="no_gerbong" value="<?php echo e($ker->no_gerbong); ?>">
                                         <input type="hidden" class="form-control" name="id" value="<?php echo e($ker->id); ?>">
                                     </div>
                                 </div>
@@ -200,11 +200,11 @@
                    <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ker): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                    <tr>
                     <td style="text-align: center;"><?php echo e($ker->id); ?></td>
-                    <td style="text-align: center;"><?php echo e($ker->no_rangkaian); ?></td>
+                    <td style="text-align: center;"><?php echo e($ker->no_gerbong); ?></td>
                     <td style="text-align: center;" width="30%">
                         <button class="btn btn-success"><i class="glyph-icon icon-navicon"></i></button>
                         <button class="btn btn-yellow" data-toggle="modal" data-target="#d_rangkaian<?php echo e($ker->id); ?>"><i class="glyph-icon icon-pencil"></i></button>
-                        <button class="btn btn-danger hapus_rangkaian" kode="<?php echo e($ker->id); ?>" no="<?php echo e($ker->no_rangkaian); ?>"><i class="glyph-icon icon-trash"></i></button>
+                        <button class="btn btn-danger hapus_rangkaian" kode="<?php echo e($ker->id); ?>" no="<?php echo e($ker->no_gerbong); ?>"><i class="glyph-icon icon-trash"></i></button>
                     </td>
                 </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

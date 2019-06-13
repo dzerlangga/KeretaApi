@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRangkaianTable extends Migration
+class CreateBeritaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateRangkaianTable extends Migration
      */
     public function up()
     {
-        Schema::create('rangkaian', function (Blueprint $table) {
+        Schema::create('berita', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('no_rangkaian');
-            $table->integer('id_kereta');
             $table->timestamps();
         });
     }
@@ -28,9 +26,6 @@ class CreateRangkaianTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rangkaian');
+        Schema::dropIfExists('berita');
     }
 }
-
-
-

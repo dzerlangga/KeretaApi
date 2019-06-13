@@ -35,4 +35,5 @@ Route::post('/plusrangkaian/{id}', 'ckereta@plus_rangkaian');
 Route::post('/edit_rangkaian/{id}', 'ckereta@edit_rangkaian');
 Route::get('/hapus_rangkaian', 'ckereta@hapus_rangkaian');
 
-// 
+// gerbong
+Route::get('/gerbong', 'ckereta@gerbong');

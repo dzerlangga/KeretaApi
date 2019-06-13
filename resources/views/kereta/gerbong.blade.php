@@ -114,7 +114,7 @@
                 <div class="panel-body">
                     <h3 class="title-hero" id="page-title">
                      Data Rangkaian
-                     <p style="font-size: 10px;">Kereta {{ $kereta[0]->nama }}</p>
+                     <p style="font-size: 10px;">Kereta {{  }}</p>
                      <button class="btn btn-primary float-right" data-toggle="modal" data-target="#kereta">Tambah<i class="glyph-icon icon-plus"></i></button>
                  </h3><!-- end head form -->
 
@@ -127,12 +127,12 @@
                             </div>
                             <div class="modal-body">
                                <div class="example-box-wrapper">
-                                <form action="/plusrangkaian/{{ $kereta[0]->id }}" method="post">
+                                <form action="/plusrangkaian/{{ }" method="post">
                                     {{ csrf_field() }}
                                     <div class="form-group">
                                         <label class="col-sm-1 control-label">Nomor</label>
                                         <div class="col-sm-12">
-                                            <input type="text" class="form-control" name="no_gerbong" placeholder="Masukan nomor"> 
+                                            <input type="text" class="form-control" name="no_rangkaian" placeholder="Masukan nomor"> 
                                         </div>
                                     </div>
                                 </div>
@@ -146,8 +146,8 @@
                 </div>
             </div><!-- End modal plus kereta -->
 
-            @foreach($data as $ker)
-            <div class="modal fade" id="d_rangkaian{{ $ker->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            @foreach()
+            <div class="modal fade" id="d_rangkaian{{  }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -156,13 +156,13 @@
                         </div>
                         <div class="modal-body">
                            <div class="example-box-wrapper">
-                            <form action="/edit_rangkaian/{{ $kereta[0]->id }}" method="post">
+                            <form action="/edit_gerbong/{{  }}" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-sm-1 control-label">Nomor</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" name="no_gerbong" value="{{ $ker->no_gerbong }}">
-                                        <input type="hidden" class="form-control" name="id" value="{{ $ker->id }}">
+                                        <input type="text" class="form-control" name="no_rangkaian" value="{{  }}">
+                                        <input type="hidden" class="form-control" name="id" value="{{  }}">
                                     </div>
                                 </div>
                             </div>
@@ -197,14 +197,14 @@
                 </tfoot>
 
                 <tbody>
-                   @foreach($data as $ker)
+                   @foreach()
                    <tr>
-                    <td style="text-align: center;">{{ $ker->id }}</td>
-                    <td style="text-align: center;">{{ $ker->no_gerbong }}</td>
+                    <td style="text-align: center;">{{  }}</td>
+                    <td style="text-align: center;">{{  }}</td>
                     <td style="text-align: center;" width="30%">
                         <button class="btn btn-success"><i class="glyph-icon icon-navicon"></i></button>
-                        <button class="btn btn-yellow" data-toggle="modal" data-target="#d_rangkaian{{ $ker->id }}"><i class="glyph-icon icon-pencil"></i></button>
-                        <button class="btn btn-danger hapus_rangkaian" kode="{{ $ker->id }}" no="{{ $ker->no_gerbong }}"><i class="glyph-icon icon-trash"></i></button>
+                        <button class="btn btn-yellow" data-toggle="modal" data-target="#d_rangkaian{{  }}"><i class="glyph-icon icon-pencil"></i></button>
+                        <button class="btn btn-danger hapus_rangkaian" kode="{{  }}" no="{{  }}"><i class="glyph-icon icon-trash"></i></button>
                     </td>
                 </tr>
                 @endforeach

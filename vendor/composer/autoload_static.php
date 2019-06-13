@@ -403,6 +403,7 @@ class ComposerStaticInit24255a68595c57560d692d2acbd5e675
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\gerbong' => __DIR__ . '/../..' . '/app/gerbong.php',
         'App\\hadir' => __DIR__ . '/../..' . '/app/hadir.php',
         'App\\kereta' => __DIR__ . '/../..' . '/app/kereta.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',

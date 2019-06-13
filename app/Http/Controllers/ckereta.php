@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\kereta;
-use App\rangkaian;
+use App\gerbong;
 
 class ckereta extends Controller
 {
@@ -41,7 +41,7 @@ class ckereta extends Controller
 
 	public function rangkaian($id)
 	{
-		$data = rangkaian::where('id_kereta',$id)->get();
+		$data = gerbong::where('id_kereta',$id)->get();
 		$kereta = \DB::table('kereta')->where('id',$id)->get();
 		// dd($data);
 		return view('kereta.data_rangkaian',compact('data','kereta'));
@@ -50,19 +50,19 @@ class ckereta extends Controller
 
 	public function plus_rangkaian(Request $request,$id)
 	{
-		$rangkaianplus = new rangkaian;
-		$rangkaianplus->no_rangkaian = $request->no_rangkaian;
-		$rangkaianplus->id_kereta = $id;
-		$rangkaianplus->save();
+		$gerbong = new gerbong;
+		$gerbong->no_gerbong = $request->no_gerbong;
+		$gerbong->id_kereta = $id;
+		$gerbong->save();
 		return redirect('/rangkaian/'.$id); 
 	}
 
 	public function edit_rangkaian(Request $request,$id)
 	{
 		$id_r = $request->id;
-		$no = $request->no_rangkaian;
-		\DB::table('rangkaian')->where('id',$id_r)->update([
-			'no_rangkaian' =>$no,
+		$no = $request->no_gerbong;
+		\DB::table('gerbong')->where('id',$id_r)->update([
+			'no_gerbong' =>$no,
 		]);
 		return redirect('/rangkaian/'.$id);
 	}
@@ -70,7 +70,12 @@ class ckereta extends Controller
 	public function hapus_rangkaian(Request $request)
 	{
 		$id = $request->kode;
-		\DB::table('rangkaian')->where('id',$id)->delete();
+		\DB::table('gerbong')->where('id',$id)->delete();
+	}
+
+	public function gerbong()
+	{
+		return view('kereta.gerbong');
 	}
 
 
