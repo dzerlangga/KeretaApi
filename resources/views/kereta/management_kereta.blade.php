@@ -209,7 +209,7 @@
                         <td style="text-align: center;" >{{ $ker->id }}</td>
                         <td style="text-align: center;">{{ $ker->nama }}</td>
                         <td style="text-align: center;" width="30%">
-                            <a href="/rangkaian"><button class="btn btn-success"><i class="glyph-icon icon-navicon"></i></button></a>
+                            <a href="/rangkaian/{{ $ker->id }}"><button class="btn btn-success"><i class="glyph-icon icon-navicon"></i></button></a>
                             <button class="btn btn-yellow" data-toggle="modal" data-target="#detail{{ $ker->id }}"><i class="glyph-icon icon-pencil"></i></button>
                             <button class="btn btn-danger hapus" kode="{{ $ker->id }}" nama="{{ $ker->nama }}" ><i class="glyph-icon icon-trash"></i></button>
                         </td>

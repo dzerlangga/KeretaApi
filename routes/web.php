@@ -28,7 +28,7 @@ Route::get('/ker', 'ckereta@index');
 Route::post('/pluskereta', 'ckereta@plus');
 Route::post('/edit', 'ckereta@edit');
 Route::get('/hapus', 'ckereta@hapus');
-Route::get('/rangkaian', 'ckereta@rangkaian');
+Route::get('/rangkaian/{id}', 'ckereta@rangkaian');
 
 
 // 

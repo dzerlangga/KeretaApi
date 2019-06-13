@@ -24,8 +24,10 @@ class ckereta extends Controller
 
 	}
 
-	public function rangkaian()
+	public function rangkaian($id)
 	{
+		echo $id;
+		$data = \DB::table('kereta')->where('id',$id);
 		return view('kereta.data_rangkaian');
 	}
 
@@ -43,5 +45,10 @@ class ckereta extends Controller
 		$nama = $request->nama; 
 		\DB::table('kereta')->where('id',$id)->delete();
 		
+	}
+
+	public function cek()
+	{
+		# code...
 	}
 }
