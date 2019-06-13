@@ -182,7 +182,8 @@
                 </div>
             </div>
         </div>
-        @endforeach
+        @endforeach<!-- End modal detail -->
+
 
 
         <div class="example-box-wrapper">
