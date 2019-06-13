@@ -687,6 +687,7 @@ $(".hapus").click(function(){
         }
     })
 });
+
 </script>
 </body>
 </html><?php /**PATH C:\xampp\htdocs\monarch\resources\views/layout/main.blade.php ENDPATH**/ ?>

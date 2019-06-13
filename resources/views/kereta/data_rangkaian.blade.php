@@ -4,8 +4,6 @@
 
 <div id="page-sidebar">
     <div class="scroll-sidebar">
-
-
        <ul id="sidebar-menu">
         <li class="header"><span>Overview</span></li>
         <li>
@@ -44,24 +42,19 @@
                 <span>Management User</span>
             </a>
         </li>
-
         <div class="example-box-wrapper" style="visibility: hidden;">
             <div id="data-example-1" class="mrg20B" style="width: 100%; height: 300px;"></div>
         </div>
-
         <div class="content-box-wrapper" style="visibility: hidden;">
             <div id="data-example-3" style="width: 100%; height: 250px;"></div>
         </div>
     </ul><!-- #sidebar-menu -->
-
-
 </div>
 </div>
 <div id="page-content-wrapper">
     <div id="page-content">
 
         <div class="container">
-
 
             <!-- Data tables -->
 
@@ -166,9 +159,10 @@
                             <form action="/edit_rangkaian/{{ $kereta[0]->id }}" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label class="col-sm-1 control-label">Nama</label>
+                                    <label class="col-sm-1 control-label">Nomor</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" name="nama" value="{{ $ker->no_rangkaian }}">
+                                        <input type="text" class="form-control" name="no_rangkaian" value="{{ $ker->no_rangkaian }}">
+                                        <input type="hidden" class="form-control" name="id" value="{{ $ker->id }}">
                                     </div>
                                 </div>
                             </div>
@@ -182,8 +176,6 @@
             </div>
         </div>
         @endforeach<!-- End modal detail -->
-
-
 
 
         <div class="example-box-wrapper">
@@ -223,10 +215,7 @@
 </div>
 </div>
 
-
-
 </div>
 </div>
 </div>
-
 @endsection

@@ -2,8 +2,6 @@
 
 <div id="page-sidebar">
     <div class="scroll-sidebar">
-
-
        <ul id="sidebar-menu">
         <li class="header"><span>Overview</span></li>
         <li>
@@ -42,24 +40,19 @@
                 <span>Management User</span>
             </a>
         </li>
-
         <div class="example-box-wrapper" style="visibility: hidden;">
             <div id="data-example-1" class="mrg20B" style="width: 100%; height: 300px;"></div>
         </div>
-
         <div class="content-box-wrapper" style="visibility: hidden;">
             <div id="data-example-3" style="width: 100%; height: 250px;"></div>
         </div>
     </ul><!-- #sidebar-menu -->
-
-
 </div>
 </div>
 <div id="page-content-wrapper">
     <div id="page-content">
 
         <div class="container">
-
 
             <!-- Data tables -->
 
@@ -162,13 +155,14 @@
                         </div>
                         <div class="modal-body">
                          <div class="example-box-wrapper">
-                            <form action="/edit" method="post">
+                            <form action="/edit_rangkaian/<?php echo e($kereta[0]->id); ?>" method="post">
                                 <?php echo e(csrf_field()); ?>
 
                                 <div class="form-group">
-                                    <label class="col-sm-1 control-label">Nama</label>
+                                    <label class="col-sm-1 control-label">Nomor</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" name="nama" value="<?php echo e($ker->no_rangkaian); ?>">
+                                        <input type="text" class="form-control" name="no_rangkaian" value="<?php echo e($ker->no_rangkaian); ?>">
+                                        <input type="hidden" class="form-control" name="id" value="<?php echo e($ker->id); ?>">
                                     </div>
                                 </div>
                             </div>
@@ -182,8 +176,6 @@
             </div>
         </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!-- End modal detail -->
-
-
 
 
         <div class="example-box-wrapper">
@@ -212,19 +204,13 @@
                     <td style="text-align: center;" width="30%">
                         <button class="btn btn-success"><i class="glyph-icon icon-navicon"></i></button>
                         <button class="btn btn-yellow" data-toggle="modal" data-target="#d_rangkaian<?php echo e($ker->id); ?>"><i class="glyph-icon icon-pencil"></i></button>
-                        <button class="btn btn-danger hapus" ><i class="glyph-icon icon-trash"></i></button>
+                        <button class="btn btn-danger hapus2" ><i class="glyph-icon icon-trash"></i></button>
                     </td>
                 </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </tbody>
         </table>
     </div>
-</div>
-</div>
-</div>
-
-
-
 </div>
 </div>
 </div>

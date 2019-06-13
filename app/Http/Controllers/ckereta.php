@@ -45,12 +45,12 @@ class ckereta extends Controller
 
 	public function edit_rangkaian(Request $request,$id)
 	{
-		$id = $request->id;
-		$nama = $request->nama;
-		\DB::table('kereta')->where('id',$id)->update([
-			'nama' =>$nama,
+		$id_r = $request->id;
+		$no = $request->no_rangkaian;
+		\DB::table('rangkaian')->where('id',$id_r)->update([
+			'no_rangkaian' =>$no,
 		]);
-		return redirect('/ker');
+		return redirect('/rangkaian/'.$id);
 	}
 
 	public function plus(Request $request)

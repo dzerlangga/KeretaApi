@@ -687,6 +687,7 @@ $(".hapus").click(function(){
         }
     })
 });
+
 </script>
 </body>
 </html>
